@@ -15,23 +15,34 @@
         bottom: 0;
         width: 100%;
       }
-      #console {
+      #mylocation {
         position: absolute;
-        width: 250px;
-        height: 50px;
-        top: 10px;
         right: 10px;
-        background-color: white;
-        z-index: 10;
-        font-size: 20px;
+        bottom: 10px;
+        width: 29px;
+        height: 29px;
         display: grid;
-        place-content: center;
-        font-family: 'Consolas';
+        place-items: center;
+        z-index: 10;
+        background-color: whitesmoke;
+        border-radius: 3px;
+
       }
+      #mylocation div {
+
+        background-image: url( 'mylocation.png' );
+        width: 18px;
+        height: 18px;
+
+      }
+
     </style>
   </head>
   <body>
     <div id="map">
+      <div id="mylocation">
+        <div></div>
+      </div>
     </div>
     <script src="./bundle.js"></script>
   </body>
