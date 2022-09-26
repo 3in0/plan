@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
     <title>OpenLayers</title>
     <link rel="stylesheet" href="ol.css" type="text/css">
     <style>
@@ -15,24 +16,38 @@
         bottom: 0;
         width: 100%;
       }
-      #mylocation {
+
+      #buttons {
         position: absolute;
-        right: 10px;
-        bottom: 10px;
-        width: 29px;
-        height: 29px;
+        left: 0.5em;
+        bottom: 0.5em;
+        font-family: 'Courier New', Courier, monospace;
+
+      }
+
+      #buttons div {
+        width: 30px;
+        height: 30px;
         display: grid;
         place-items: center;
         z-index: 10;
         background-color: whitesmoke;
         border-radius: 3px;
-
+        margin: 1px;
       }
-      #mylocation div {
 
-        background-image: url( 'mylocation.png' );
-        width: 18px;
-        height: 18px;
+      .ol-touch .ol-control button {
+        background: silver;
+      }
+
+      @media only screen and (max-width: 600px ) {
+
+        .ol-touch .ol-control button, #buttons div {
+          width: 12vmin;
+          height: 12vmin;
+          font-size: 12vmin;
+          background-size: 12vmin;
+        }
 
       }
 
@@ -40,8 +55,13 @@
   </head>
   <body>
     <div id="map">
-      <div id="mylocation">
-        <div></div>
+      <div id="buttons">
+        <div id="copylocation">
+          <div>C</div>
+        </div>
+        <div id="mylocation">
+          <div>L</div>
+        </div>
       </div>
     </div>
     <script src="./bundle.js"></script>
